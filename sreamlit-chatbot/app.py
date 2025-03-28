@@ -1,8 +1,7 @@
 import streamlit as st
 from openai import OpenAI
-api_key = "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"
-# api_key = "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"
-
+import os
+api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=api_key)
 
 st.title("Chatbot")
